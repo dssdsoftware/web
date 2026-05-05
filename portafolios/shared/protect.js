@@ -1,0 +1,1 @@
+!function(){document.addEventListener("contextmenu",(e=>e.preventDefault())),document.addEventListener("keydown",(e=>{("F12"===e.key||e.ctrlKey&&e.shiftKey&&"I"===e.key||e.ctrlKey&&"u"===e.key)&&e.preventDefault()}));setInterval((function(){Function("debugger")()}),50)}();

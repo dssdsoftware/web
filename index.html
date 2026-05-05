@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.telegram.org; upgrade-insecure-requests;">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>DSSD - Soluciones en IA y Automatización</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%230ba771'/%3E%3Cstop offset='100%25' stop-color='%234ade80'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M3 17l6-6 4 4 8-8' stroke='url(%23g)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15 7h6v6' stroke='url(%23g)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="bg-grid"></div>
+    <div class="bg-gradient"></div>
+
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <img src="img/Logo.png" alt="DSSD Logo" style="height: 32px; width: auto;">
+        </a>
+        <ul class="nav-center">
+            <li><a href="#soluciones">Soluciones</a></li>
+            <li><a href="#metodologia">Metodología</a></li>
+            <li><a href="#casos">Casos de Uso</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="#contacto" class="btn-small">Empezar ahora</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <!-- Upward Trend Line Background -->
+            <div class="trend-bg">
+                <svg preserveAspectRatio="none" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="rgba(16, 185, 129, 0.1)" stop-opacity="0.1" />
+                            <stop offset="100%" stop-color="rgba(16, 185, 129, 1)" stop-opacity="1" />
+                        </linearGradient>
+                        <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="rgba(16, 185, 129, 0.4)" stop-opacity="0.4" />
+                            <stop offset="100%" stop-color="rgba(16, 185, 129, 0)" stop-opacity="0" />
+                        </linearGradient>
+                        <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="8" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <path class="trend-area"
+                        d="M 0,600 L 0,550 L 150,480 L 300,500 L 450,350 L 600,380 L 750,200 L 900,250 L 1200,50 L 1200,600 Z"
+                        fill="url(#areaGradient)" />
+
+                    <path class="trend-line"
+                        d="M 0,550 L 150,480 L 300,500 L 450,350 L 600,380 L 750,200 L 900,250 L 1200,50" fill="none"
+                        stroke="url(#lineGradient)" stroke-width="4" filter="url(#neonGlow)" />
+
+                    <circle class="trend-dot" cx="1200" cy="50" r="8" fill="#fff" filter="url(#neonGlow)" />
+                </svg>
+            </div>
+            <h1 class="reveal">Ecosistemas de IA y desarrollo a medida para tu negocio.</h1>
+            <p class="reveal delay-100">Automatizamos procesos, construimos software escalable y transformamos tus ideas
+                en sistemas eficientes que generan resultados medibles.</p>
+            <div class="hero-buttons reveal delay-200">
+                <a href="#soluciones" class="btn">Explorar soluciones</a>
+                <a href="#contacto" class="btn btn-outline">Agendar consultoría</a>
+            </div>
+        </section>
+
+        <!-- Marquee de Tecnologías -->
+        <div class="marquee-container reveal delay-300">
+            <div class="marquee-content">
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg> OpenAI</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16v-4M12 8h.01" />
+                    </svg> Anthropic</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    </svg> Meta Llama</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+                    </svg> Make / Zapier</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="5" width="20" height="14" rx="2" />
+                        <line x1="2" y1="10" x2="22" y2="10" />
+                    </svg> Stripe</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg> AWS / GCP</div>
+                <!-- Duplicados -->
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg> OpenAI</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16v-4M12 8h.01" />
+                    </svg> Anthropic</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    </svg> Meta Llama</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+                    </svg> Make / Zapier</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="5" width="20" height="14" rx="2" />
+                        <line x1="2" y1="10" x2="22" y2="10" />
+                    </svg> Stripe</div>
+                <div class="marquee-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg> AWS / GCP</div>
+            </div>
+        </div>
+
+        <!-- Estadísticas y ROI -->
+        <section id="estadisticas" style="padding-top: 80px; padding-bottom: 40px;">
+            <div class="stats-grid reveal">
+                <div class="stat-card">
+                    <div class="stat-number">+1000</div>
+                    <div class="stat-label">Horas ahorradas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">327%</div>
+                    <div class="stat-label">ROI promedio</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3X</div>
+                    <div class="stat-label">Aumento en velocidad de respuesta</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Precisión en tareas automatizadas</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soluciones -->
+        <section id="soluciones">
+            <div class="section-header reveal">
+                <h2 class="section-title">Infraestructura digital</h2>
+                <p class="section-subtitle">Soluciones de grado empresarial construidas para escala, seguridad e impacto
+                    duradero en tus operaciones.</p>
+            </div>
+
+            <div class="grid-3 bento-grid">
+                <div class="glass-card servicios-card reveal delay-100">
+                    <div class="card-icon float-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Desarrollo Web & Software</h3>
+                    <p>Interfaces modernas, limpias y de alto rendimiento. Construimos plataformas robustas que se
+                        adaptan perfectamente a tu modelo de negocio.</p>
+                    <div class="price-tag">Mantenimiento desde $20.000</div>
+                </div>
+
+                <div class="glass-card servicios-card reveal delay-200">
+                    <div class="card-icon float-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Asistentes de IA & Bots</h3>
+                    <p>Agentes inteligentes 24/7 para atención al cliente y ventas, entrenados con la base de
+                        conocimientos de tu empresa e integrados a WhatsApp.</p>
+                    <div class="price-tag">Implementación a medida</div>
+                </div>
+
+                <div class="glass-card servicios-card reveal delay-300">
+                    <div class="card-icon float-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Automatización de Procesos</h3>
+                    <p>Eliminamos el trabajo manual conectando tus herramientas (CRMs, Bases de datos, ERPs) en flujos
+                        de trabajo optimizados.</p>
+                    <div class="price-tag">Auditoría inicial bonificada</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metodología (Cómo trabajamos) -->
+        <section id="metodologia">
+            <div class="section-header reveal">
+                <h2 class="section-title">Nuestra Metodología</h2>
+                <p class="section-subtitle">Un proceso estructurado, probado y enfocado 100% en el retorno de inversión
+                    y la seguridad de tu empresa.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Descubrimiento y Análisis</h3>
+                        <p>Comprendemos en profundidad el contexto, los cuellos de botella y los objetivos de tu
+                            empresa. Auditamos tus sistemas actuales e identificamos oportunidades de alto impacto con
+                            IA.</p>
+                    </div>
+                </div>
+                <div class="step-card reveal delay-100">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Estrategia y Arquitectura</h3>
+                        <p>Diseñamos la hoja de ruta técnica y los flujos de automatización. Privilegiamos victorias
+                            rápidas (Quick Wins) que demuestren el ROI rápidamente minimizando el riesgo operativo.</p>
+                    </div>
+                </div>
+                <div class="step-card reveal delay-200">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Implementación e Integración</h3>
+                        <p>Nuestro equipo construye soluciones empresariales que se integran con tu CRM y software
+                            existente. Entregamos iteraciones ágiles con ciclos de retroalimentación constantes.</p>
+                    </div>
+                </div>
+                <div class="step-card reveal delay-300">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Optimización y Escalado</h3>
+                        <p>El lanzamiento es solo el inicio. Monitorizamos el rendimiento de los agentes, ajustamos
+                            prompts, optimizamos tiempos de respuesta y te ayudamos a escalar lo que funciona.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Casos de Uso / Portafolio -->
+        <section id="casos">
+            <div class="section-header reveal">
+                <h2 class="section-title">Casos de Uso</h2>
+                <p class="section-subtitle">Nuestros trabajos son 100% confidenciales,
+                    pero hemos decidido construir estas demostraciones para guiarte.</p>
+            </div>
+
+            <div class="grid-3 bento-grid">
+                <div class="glass-card portfolio-card reveal delay-100">
+                    <div class="portfolio-img">
+                        <svg class="float-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff"
+                            stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Sistema de Gestión Mayorista</h3>
+                        <p>Dashboard centralizado para control de inventario en tiempo real, facturación y gestión de
+                            pedidos.</p>
+                        <a href="portafolios/1-gestion-mayorista/index.html" class="card-link">Ver demostración →</a>
+                    </div>
+                </div>
+                <div class="glass-card portfolio-card reveal delay-200">
+                    <div class="portfolio-img">
+                        <svg class="float-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff"
+                            stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Bot de Reservas por WhatsApp</h3>
+                        <p>Agente de IA que gestiona la agenda de clínicas y negocios automáticamente, reduciendo la
+                            fricción operativa.</p>
+                        <a href="portafolios/2-bot-whatsapp/index.html" class="card-link">Ver demostración →</a>
+                    </div>
+                </div>
+                <div class="glass-card portfolio-card reveal delay-300">
+                    <div class="portfolio-img">
+                        <svg class="float-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff"
+                            stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>E-commerce de Alto Rendimiento</h3>
+                        <p>Tienda virtual headless optimizada para velocidad y conversión, con integraciones de pago
+                            nativas.</p>
+                        <a href="portafolios/3-ecommerce-bebidas/index.html" class="card-link">Ver demostración →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Precios -->
+        <section id="precios">
+            <div class="section-header reveal">
+                <h2 class="section-title">Modelos de Inversión</h2>
+                <p class="section-subtitle">Planes de implementación claros, diseñados para generar ROI desde el primer
+                    día.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="glass-card pricing-card reveal delay-100">
+                    <h3 class="plan-name">Implementación Starter</h3>
+                    <div class="plan-price">$300.000<span> / setup</span></div>
+                    <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.9rem;">+ $20.000 / mes
+                        (mantenimiento)</p>
+                    <ul class="plan-features">
+                        <li>Arquitectura web profesional</li>
+                        <li>Diseño orientado a conversión</li>
+                        <li>Alojamiento seguro y rápido</li>
+                        <li>Soporte técnico y monitoreo</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-outline" style="width: 100%;">Solicitar evaluación</a>
+                </div>
+
+                <div class="glass-card pricing-card popular reveal delay-200">
+                    <div class="popular-badge">RECOMENDADO</div>
+                    <h3 class="plan-name">Ecosistema Pro</h3>
+                    <div class="plan-price">$400.000<span> / setup</span></div>
+                    <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.9rem;">+ $20.000 / mes
+                        (mantenimiento)</p>
+                    <ul class="plan-features">
+                        <li>Plataforma E-commerce o Gestor</li>
+                        <li>Integraciones IA y WhatsApp</li>
+                        <li>Automatización de flujos de pago</li>
+                        <li>Soporte prioritario 24/7</li>
+                    </ul>
+                    <a href="#contacto" class="btn" style="width: 100%;">Agendar consultoría</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto">
+            <div class="section-header reveal">
+                <h2 class="section-title">Inicia la transformación</h2>
+                <p class="section-subtitle">Cuéntanos sobre tu infraestructura actual y evaluaremos las oportunidades de
+                    optimización con IA.</p>
+            </div>
+
+            <div class="contact-container reveal delay-100">
+                <div class="contact-info">
+                    <h3>Hablemos de estrategia</h3>
+                    <p>Agendaremos una sesión para comprender tus procesos operativos y diseñar una hoja de ruta
+                        tecnológica personalizada.</p>
+                    <a href="http://wa.link/6wrmy3" class="btn btn-outline" style="margin-top: 16px;" target="_blank"
+                        rel="noopener noreferrer">Contactar vía WhatsApp</a>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Nombre o Empresa"
+                            required autocomplete="name" pattern="[a-zA-Z0-9\s\.\-]+"
+                            title="Solo letras, números y espacios">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control"
+                            placeholder="Email corporativo o WhatsApp" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-control"
+                            placeholder="Describe brevemente tus necesidades operativas..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%">Enviar solicitud</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="cta-section reveal">
+            <h2>Tecnología de nivel empresarial.</h2>
+            <p>Sistemas construidos para escalar. Comienza a automatizar y hacer crecer tu negocio con las herramientas
+                correctas.</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn">Solicitar auditoría</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
+                <img src="img/Logo.png" alt="DSSD Logo" style="height: 24px; width: auto;">
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">© 2026 DSSD. Arquitectura digital y automatización.
+            </p>
+            <div class="footer-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.instagram.com/dssd_software/" target="_blank"
+                    rel="noopener noreferrer">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Navbar blur effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
