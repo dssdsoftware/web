@@ -58,16 +58,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Prevent form submission reload and send to Telegram
+// Prevent form submission reload and send to Discord Webhook
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        // --- CONFIGURACIÓN DE TELEGRAM ---
-        // REEMPLAZA ESTOS VALORES CON LOS DE TU BOT
-        const BOT_TOKEN = '8625842821:AAFebfG5ElcITJB4T5en-MkEusLuPXV_8-4';
-        const CHAT_ID = '7732140429';
+        // --- CONFIGURACIÓN DE DISCORD ---
+        const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1506769076108656833/u3iNOzbIbHEqOvdod-WfWTjZmhLRFtr72kOo2lU9wuhVKEvca1zV6xpQuHrb-TJk52O7';
         // ---------------------------------
 
         const name = document.getElementById('name').value;
@@ -81,30 +79,52 @@ if (contactForm) {
         submitBtn.innerText = 'Enviando...';
         submitBtn.disabled = true;
 
-        // Formatear el mensaje para Telegram
-        const text = `📬 *Nuevo Mensaje Web - DSSD*\n\n*Nombre/Empresa:* ${name}\n*Contacto:* ${email}\n*Mensaje:* ${messageText}`;
+        // Formatear payload de Discord con Rich Embeds para diseño premium
+        const payload = {
+            username: "DSSD Leads Bot",
+            embeds: [{
+                title: "📬 Nuevo Mensaje de Cliente Potencial",
+                color: 1096065, // Verde esmeralda (#10b981) en formato entero decimal
+                fields: [
+                    {
+                        name: "👤 Nombre / Empresa",
+                        value: name || "No especificado",
+                        inline: true
+                    },
+                    {
+                        name: "📧 Contacto",
+                        value: email || "No especificado",
+                        inline: true
+                    },
+                    {
+                        name: "💬 Mensaje",
+                        value: messageText || "Sin mensaje"
+                    }
+                ],
+                timestamp: new Date().toISOString(),
+                footer: {
+                    text: "DSSD Lead Capture System"
+                }
+            }]
+        };
 
         try {
-            const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            const response = await fetch(DISCORD_WEBHOOK_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    chat_id: CHAT_ID,
-                    text: text,
-                    parse_mode: 'Markdown'
-                })
+                body: JSON.stringify(payload)
             });
 
             if (response.ok) {
                 alert('¡Mensaje enviado con éxito! Nos pondremos en contacto a la brevedad.');
                 contactForm.reset(); // Limpiar el formulario
             } else {
-                throw new Error('Error de conexión con Telegram');
+                throw new Error('Error al enviar el mensaje a Discord');
             }
         } catch (error) {
-            console.error('Error enviando a Telegram:', error);
+            console.error('Error enviando a Discord:', error);
             alert('Hubo un error al enviar. Por favor, contáctanos directamente por WhatsApp.');
         } finally {
             // Restaurar botón
